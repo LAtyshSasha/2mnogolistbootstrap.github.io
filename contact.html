@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2rism</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+    <div class="wrapper">
+
+
+    <!-- Navbar -->
+        <nav class=" navbar navbar-expand-lg navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+            <div class="container-fluid">
+            <img src="assets/img/2rism/logo.png" alt="">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">catalog</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: #FFFFFF;" href="index.html">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: #FFFFFF;" href="hotels.html">hotels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: #FFFFFF;" href="tours.html">tours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: #FFFFFF;" href="destinations.html">destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: #FFFFFF;" href="activities.html">activities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: #FFFFFF;" href="contact.html">contact</a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+    <main class="main">
+
+
+
+    <!-- Question -->
+        <div class="row m-2">
+            <div class="col-md-2"></div>
+                <div class="col-12 col-md-8 text-center">
+                    <h2 class="fw-semibold m-3 mt-4" id="aboutus" style="color: #161414;">Join our travel community!</h2>
+                    <h5 class="fw-normal m-2" id="aboutus" style="color: #5B5B5B;">Register on our website to receive exclusive offers, news about the best destinations and travel tips. Join our community and discover a world of amazing adventures and unforgettable experiences!</h5>
+                    <h5 class="fw-semibold m-2" id="aboutus" style="color: #161414;">We are waiting for you!</h5>
+                </div>
+            <div class="col-md-2"></div>
+        </div>
+    
+    
+    <!-- Register/Login -->
+        <div class="container mt-5">
+            <h3 class="fw-normal" style="color: #161414;">Login</h3>
+            <form id="loginForm">
+                <div class="mb-3">
+                    <label for="username" class="form-label" style="color: #161414;">Username</label>
+                    <input type="text" class="form-control" id="username" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label" style="color: #161414;">Password</label>
+                    <input type="password" class="form-control" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-dark">Sign In</button>
+            </form>
+        
+            <h5 style="color: #5B5B5B; " class="mt-3 fw-normal">Not have an account?</h5>
+            <h3 class="mt-5 fw-normal" style="color: #161414;">Register</h3>
+            <form id="registerForm">
+                <div class="mb-3">
+                    <label for="regUsername" class="form-label" style="color: #161414;">Username</label>
+                    <input type="text" class="form-control" id="regUsername" required>
+                </div>
+                <div class="mb-3">
+                    <label for="regPassword" class="form-label" style="color: #161414;">Password</label>
+                    <input type="password" class="form-control" id="regPassword" required>
+                </div>
+                <button type="submit" class="btn btn-success btn-dark ">Sign Up</button>
+            </form>
+            <div id="alert" class="alert alert-success mt-3 d-none" role="alert">
+                Well done!
+            </div>
+        </div>
+    
+    
+    <!-- Script -->
+        <script>
+            document.getElementById('loginForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // стандартное поведение формы
+            
+                showAlert();
+            });
+            document.getElementById('registerForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // стандартное поведение формы
+            
+                showAlert();
+            });
+            function showAlert() {
+                const alert = document.getElementById('alert');
+                alert.classList.remove('d-none');
+                setTimeout(() => {
+                    alert.classList.add('d-none');
+                }, 3000); // Скрыть уведомление через 3 секунды
+            }
+        </script>
+
+
+
+    </main>
+
+    
+    
+    <!-- Footer -->
+        <div class="container-fluid mt-5" style="background-color: #212529;"> 
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"> 
+                <div class="col-md-1"></div> 
+                <div class="col-6 col-md-5 d-flex align-items-center"> 
+                </div> 
+                <ul class="nav col-6 col-md-5 justify-content-end list-unstyled d-flex"> 
+                    <li class="ms-3 h-100"><a style="color: #FFFFFF;" href="https://telegram.org/">2rism</i></a></li>
+                </ul> 
+                <div class="col-md-1"></div> 
+            </footer> 
+        </div>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
